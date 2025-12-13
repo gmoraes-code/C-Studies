@@ -2,5 +2,8 @@
 
 int main(void)
 {
-    printf("hello, world\n");
+    char answer[100];
+    printf("What's your name? ");
+    fgets(answer, sizeof(answer), stdin);
+    printf("hello, %s", answer);
 }
