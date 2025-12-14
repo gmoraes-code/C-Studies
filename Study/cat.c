@@ -2,10 +2,16 @@
 
 int main(void)
 {
-    int i = 3;
-    while (i > 0)
+    int i = 0;
+    while (i < 3) //"while" method to achieve loops
     {
         printf("Meow\n");
-        i--;
+        i++;
+    }
+
+    for (int i=0; i < 3; i++) //"for" method to achieve loops
+    {
+        printf("meow\n");
     }
 }
+
