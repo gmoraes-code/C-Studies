@@ -1,35 +1,20 @@
 #include <stdio.h>
-#include <string.h> //Lets the user use the string comparison tool.
 
-int get_y(void);
-int get_x(void);
+int get_int(void);
 int main(void)
 {
-    int x = get_x();
-    int y = get_y();
-    char op [4];
-    printf("The value of X is %i, while the value of Y is %i.\n", x, y); 
-    printf("Which operation do you choose? (sum, dif, mul, div)?");
-    scanf("%s", op);
-    if (op == "sum")
+    int scores[3];
+    for (int i = 0; i < 3; i++)
     {
-        int n = x + y;
-        printf("%i", n);
+        printf("Score %i Value:", i+1);
+        scores [i] = get_int();
     }
-    
+    printf("Average: %f\n", (scores [0] + scores [1] + scores [2]) / 3.0);
 }
-
-int get_x(void)
+int get_int(void)
 {
     int n;
-    printf("Value of X: ");
     scanf("%i", &n);
     return n;
 }
-int get_y(void)
-{
-    int n;
-    printf("Value of Y: ");
-    scanf("%i,", &n);
-    return n;
-}
+
