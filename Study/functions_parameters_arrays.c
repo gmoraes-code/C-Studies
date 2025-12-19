@@ -14,7 +14,7 @@ int main(void)
     }
     printf("Average: %f\n", average(N, scores)); //Here, we are printing the average number with a placeholder %f which will display this value, while the float value will come from the average function
 }
-float average (int length, int array[]) //Defining the average function, which has two integer arguments, "length" and "array", correlated to "N" and "scores", respectively
+float average (int length, int array[]) //Defining the average function, which has two integer parameters, "length" and "array", correlated to "N" and "scores", respectively. The function needs those two parameters in order to work.
 {
     int sum = 0;
     for (int i = 0; i < length; i++)
