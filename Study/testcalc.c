@@ -4,8 +4,11 @@
 float set [1089];                                                           //creates an array of [n] elements must be odd number   
 int display(void);
 const int g = 33;                                                           //g must be the sqrt of set size (also odd)
+int p;
 int main(void)
 {
+    printf("Parameter value: ");
+    scanf("%i", &p);
     int x, y;
     float z;
     int cont = 0;
@@ -13,7 +16,7 @@ int main(void)
     {
         for (x = -((g - 1.0) / 2); x <= ((g - 1.0) / 2); x++)
         {
-            z = (sin(x) + cos(y));                                       //FUNCTION HERE
+            z = (sin(x * 0.3) + cos(y * 0.3));                                       //FUNCTION HERE, remember to use antialiasing when needed (* 0.2 or 0.3)
             set[cont] = z;
             cont++;
 //          printf("(x: %i, y: %i), calc: %f \n", x, y, z);
@@ -29,25 +32,29 @@ int display(void)                                                      //display
     {
         for(int a = b; a < b + g; a++)                                 //inside loop to print lines
         {
-            if (-2.5 < set[a] < -1.5 )
+            if (set[a] >= (p -2.5) && set[a] <= (p -1.5))
             {
                 printf("  ");                                         //prints element [a] from the set
             }
-            else if (-1.5 < set[a] < -0.5)
+            else if (set[a] >= (p -1.5) && set[a] <= (p +0.5))
             {
                 printf(". ");
             }
-            else if (-0.5 < set[a] < 0.5)
+            else if (set[a] >= (p +0.5) && set[a] <= (p + 1.5))
             {
                 printf("- ");
             }
-            else if (0.5 < set[a] < 1.5)
+            else if (set[a] >= (p + 1.5) && set[a] <= (p + 2.5))
             {
                 printf("= ");
             }
-            else if (1.5 < set[a] < 2.5)
+            else if (set[a] >= (p + 2.5) && set[a] <= (p + 3.5))
             {
                 printf("# ");
+            }
+            else
+            {
+                printf("? ");
             }            
         }
         b += g;                                                     //adds 10 to the variable, so each before the inner loop is executed, it starts with +10 
