@@ -3,14 +3,15 @@
 
 int encrypt(void);
 char name[15];
-int N = 10001;
 int i;
+int N = 10001;  //Caesar's factor
 int main(void)
 {
     printf("What's your name? ");
     scanf("%s", name);
     printf("Hello!, %s\n", name);
     printf("First letter: %c \n", name[0]);
+
     encrypt();
     printf("Cryptic name: %s", name);
 }
