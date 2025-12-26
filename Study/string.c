@@ -4,7 +4,8 @@
 int encrypt(void);
 char name[15];
 int i;
-int N = 10001;  //Caesar's factor
+int N;  //Caesar's factor
+int parameter_geter(void);
 int main(void)
 {
     printf("What's your name? ");
@@ -12,8 +13,15 @@ int main(void)
     printf("Hello!, %s\n", name);
     printf("First letter: %c \n", name[0]);
 
+    parameter_geter();
     encrypt();
     printf("Cryptic name: %s", name);
+}
+
+int parameter_geter(void)
+{
+    printf("Parameter size:");
+    scanf("%i", &N);
 }
 
 int encrypt(void)
@@ -23,3 +31,4 @@ int encrypt(void)
         name[i] = name[i] + N;
     }
 }
+
