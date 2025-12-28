@@ -1,9 +1,11 @@
 #include <stdio.h>
 
+int get_n(void);
+int n;
 void print_row(int n); //Declaring the function
-int main(void) 
+int main(void)
 {
-    const int n = 4; //Declaring a constant, a value attributed to n which will not change
+    get_n();
     for(int i = 0; i < n; i++) //A simple loop which prints a column of # characters
     {
         print_row(n);    
@@ -17,4 +19,10 @@ void print_row(int n) //The function which prints #
         printf("#");
     }
     printf("\n");    
+}
+
+int get_n(void)
+{
+    printf("Value of n:");
+    scanf("%i", &n);
 }
