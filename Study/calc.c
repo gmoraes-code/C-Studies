@@ -15,7 +15,7 @@ int main(void)
     scanf("%i", &d);
 
     float r;
-    r = (s-(d * (n-1)))/n;
+    r = (s-(d * (n-2)))/n;
 
     printf("%f", r);
 }
