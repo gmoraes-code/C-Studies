@@ -14,8 +14,8 @@ int main(void)
     printf("valor da distância: ");
     scanf("%i", &d);
 
-    float r;
-    r = (s-(d * (n-2)))/n;
+    float h;
+    h = (s-(d * (n-2)))/n;
 
-    printf("%f", r);
+    printf("%f", h+2);
 }
