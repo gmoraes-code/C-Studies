@@ -17,5 +17,5 @@ int main(void)
     float h;
     h = (s-(d * (n-2)))/n;
 
-    printf("%f", h+2);
+    printf("%f", h+3);
 }
