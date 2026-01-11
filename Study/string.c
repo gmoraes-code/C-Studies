@@ -2,7 +2,7 @@
 #include <string.h>
 
 int encrypt(void);
-char name[15];
+char name[20];
 int i;
 int N;  //Caesar's factor
 int parameter_geter(void);
